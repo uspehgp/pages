@@ -41,4 +41,8 @@ export class AppComponent {
       url: 'https://images.unsplash.com/photo-1521170813716-0b3f42fcfb65?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80'
     },
   ]
+
+  checkPageIndex(i: number) {
+    return Math.abs(this.currentPage - i) < 5
+  }
 }
