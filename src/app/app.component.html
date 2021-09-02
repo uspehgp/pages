@@ -1,6 +1,6 @@
 <nav aria-label="...">
   <ul class="pagination">
-    <li class="page-item" [ngClass]="{disabled: currentPage===0}">
+    <li class="page-item" appClass [ngClass]="{disabled: currentPage===0}">
       <a class="page-link" (click)="currentPage=currentPage-1">Prev</a>
     </li>
     <ng-container *ngFor="let image of images; let i=index">
@@ -18,22 +18,22 @@
   </ul>
 </nav>
 
-<!--<div>-->
-<!--  <h4>{{images[currentPage].title}}</h4>-->
-<!--  <img [src]="images[currentPage].url"/>-->
-<!--</div>-->
-
-<div [ngSwitch]="currentPage">
-  <div *ngSwitchCase="0">
-    currentPage is zero
-  </div>
-  <div *ngSwitchCase="2">
-    currentPage is two
-  </div>
-  <div *ngSwitchCase="5">
-    currentPage is five
-  </div>
-  <div *ngSwitchDefault>
-    currentPage unknown
-  </div>
+<div>
+  <h4>{{images[currentPage].title}}</h4>
+  <img [src]="images[currentPage].url"/>
 </div>
+
+<!--<div [ngSwitch]="currentPage">-->
+<!--  <div *ngSwitchCase="0">-->
+<!--    currentPage is zero-->
+<!--  </div>-->
+<!--  <div *ngSwitchCase="2">-->
+<!--    currentPage is two-->
+<!--  </div>-->
+<!--  <div *ngSwitchCase="5">-->
+<!--    currentPage is five-->
+<!--  </div>-->
+<!--  <div *ngSwitchDefault>-->
+<!--    currentPage unknown-->
+<!--  </div>-->
+<!--</div>-->
