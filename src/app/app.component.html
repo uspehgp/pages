@@ -3,7 +3,7 @@
     <li class="page-item" [appClass]="{disabled: currentPage===0}">
       <a class="page-link" (click)="currentPage=currentPage-1">Prev</a>
     </li>
-    <ng-container *ngFor="let image of images; let i=index">
+    <ng-container *appTimes="images.length; let i=index">
       <li class="page-item"
           (click)="currentPage=i"
           [appClass]="{active: i === currentPage}"
@@ -23,9 +23,9 @@
   <img [src]="images[currentPage].url"/>
 </div>
 
-<ul *appTimes="5">
-  <li>Hi there</li>
-</ul>
+<!--<ul *appTimes="5">-->
+<!--  <li>Hi there</li>-->
+<!--</ul>-->
 
 <!--<div [ngSwitch]="currentPage">-->
 <!--  <div *ngSwitchCase="0">-->
